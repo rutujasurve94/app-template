@@ -1,0 +1,59 @@
+project_dir: "{{project_name.replace(' ', '_').replace('-', '_')}}"
+fields:
+  - name: project_name
+    help: Project name of the App (UpperCamelCase)
+    default: MyNeuralSearchProject
+    type: str
+
+  - name: jina_version
+    help: Jina version for the project
+    default: 0.8.2
+    type: str
+
+  - name: author_name
+    help: Name of the author
+    default: Jina AI Dev-Team (dev-team@jina.ai)
+    type: str
+
+  - name: project_short_description
+    help: Description of the Project
+    default: null
+    type: str
+
+  - name: task_type
+    help: Type of task
+    default: null
+    type: str
+    allowed:
+      - cv
+      - nlp
+
+  - name: index_type
+    help: Type of index to use
+    default: null
+    type: str
+    allowed:
+      - files
+      - strings
+      - ndarray
+      - customized
+
+  - name: public_port
+    help: Public port
+    default: 65481
+    type: str
+
+  - name: parallel
+    help: Degree of parallelism
+    default: 2
+    type: str
+
+  - name: shards
+    help: Degree of sharding
+    default: 2
+    type: str
+
+  - name: version
+    help: Semantic version of the Executor
+    default: 0.0.1
+    type: str

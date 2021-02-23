@@ -1,0 +1,5 @@
+jina[devel,torch,tensorflow]=={{ jina_version }}
+transformers==3.5.1
+{%- if task_type | lower == 'nlp' %}
+torch==1.7.1
+{%- endif %}

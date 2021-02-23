@@ -1,0 +1,12 @@
+{%- if task_type | lower == 'cv' %}
+!ImageTorchEncoder
+with:
+  pool_strategy: avg
+{%- endif %}
+{%- if task_type | lower == 'nlp' %}
+!TransformerTorchEncoder
+with:
+  pool_strategy: auto
+  pretrained_model_name_or_path: distilbert-base-cased
+  max_length: 96
+{%- endif %}
